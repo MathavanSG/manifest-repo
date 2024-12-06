@@ -5,8 +5,8 @@ metadata:
   namespace: argocd
   annotations:
     # The image-list annotation maps an alias to the actual image used by the deployment.
-    # Here "my-webapp" is an alias, and "opensourceops/my-webapp" is the actual image name.
-    argocd-image-updater.argoproj.io/image-list: my-webapp=opensourceops/my-webapp:~1.0
+    # Here "my-webapp" is an alias, and "opensourceops/my-webapp" is the actual image name. docker pull agentmaddy/my-webapp:1.0.3
+    argocd-image-updater.argoproj.io/image-list: my-webapp=agentmaddy/my-webapp:~1.0
 
     # Update strategy: "latest" means Image Updater will attempt to pull the latest tag from the registry.
     # Other strategies include "semver" or "digest". Adjust as needed.
@@ -19,7 +19,7 @@ spec:
   project: default
 
   source:
-    repoURL: 'https://github.com/Ompragash/manifest-repo.git'
+    repoURL: 'https://github.com/MathavanSG/manifest-repo.git'
     targetRevision: main
     path: k8s
 

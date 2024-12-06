@@ -1,3 +1,4 @@
 kustomize:
   images:
   - opensourceops/my-webapp:1.0.10
+  - agentmaddy/my-webapp:1.0.5
